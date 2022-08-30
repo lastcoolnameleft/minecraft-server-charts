@@ -133,7 +133,7 @@ spec:
         {{- end }}
       {{- end }}
       - name: {{ template "minecraft.fullname" . }}
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: "{{ .Values.global.azure.images.server.registry }}/{{ .Values.global.azure.images.server.image }}@{{ .Values.global.azure.images.server.digest }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
