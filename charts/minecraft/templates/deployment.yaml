@@ -14,6 +14,7 @@ metadata:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
+    billing: {{ .Values.global.azure.billingIdentifier }}
 spec:
   replicas: {{ default 1 .Values.replicaCount }}
   strategy:

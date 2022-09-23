@@ -1,4 +1,5 @@
 {
+	"$schema": "https://schema.management.azure.com/schemas/0.1.2-preview/CreateUIDefinition.MultiVm.json#",
 	"handler": "Microsoft.Azure.CreateUIDef",
 	"version": "0.1.2-preview",
 	"parameters": {
@@ -24,7 +25,7 @@
 				"type": "Microsoft.Common.OptionsGroup",
 				"label": "Create new dev cluster?",
 				"defaultValue": "No",
-				"toolTip": "",
+				"toolTip": "Create new cluster",
 				"constraints": {
 					"allowedValues": [
 						{
@@ -129,10 +130,8 @@
 								"name": "enableAutoScaling",
 								"type": "Microsoft.Common.CheckBox",
 								"label": "Enable auto scaling",
-								"defaultValue": true,
-								"constraints": {
-									"required": true
-								}
+								"toolTip": "Enable auto scaling",
+								"defaultValue": true						
 							},
 							{
 								"name": "vmCount",
@@ -143,7 +142,7 @@
 								"subLabel": "",
 								"defaultValue": 1,
 								"showStepMarkers": false,
-								"toolTip": "",
+								"toolTip": "Specify VM count",
 								"constraints": {
 									"required": false
 								},

@@ -1,18 +1,11 @@
 applicationName: com.minecraft.server
-publisher: "Mojang"
+publisher: "Mojang Partner"
 description: "A multi-player server for Minecraft."
-version: 1.0.0 #Must be semver
-restrictions:
-  minKubernetesVersion: 1.21
-  requireGpuNodes: False
-  openShiftAllowed: True
-  nodeType: Linux
-  newClusterRequired: False
+version: 1.0.1 #Must be semver
 helmChart: "./charts/minecraft"
-clusterArmTemplate: "./cluster-deployment.json"
+clusterArmTemplate: "./mainTemplate.json"
 uiDefinition: "./createUIDefinition.json"
 registryServer: "thfalgoupartner.azurecr.io"
 extensionRegistrationParameters:
   defaultScope: "cluster"
-  billingIdentifier: microsoft.marketplace.minecraft.server.free
-  
+  namespace: "minecraft"

@@ -3,4 +3,4 @@
 charts/.DS_Store
 /.cnab
 porter.yaml
-minecraft-*.tgz
+*.tgz

@@ -1,7 +1,7 @@
 ## Added for Azure K8S Apps
 global:
   azure:
-    billingIdentifier: microsoft.marketplace.minecraft.server.free
+    billingIdentifier: DONOTMODIFY
     images:
       server:
         digest: sha256:3343e86f93663e7adbb46518056f7601233ec9bf662453b6ae32c2c4bf59a7d7
