@@ -5,7 +5,7 @@ version: 1.0.1 #Must be semver
 helmChart: "./charts/minecraft"
 clusterArmTemplate: "./mainTemplate.json"
 uiDefinition: "./createUIDefinition.json"
-registryServer: "ahcsasacr.azurecr.io"
+registryServer: "thfalgoupartner.azurecr.io"
 extensionRegistrationParameters:
   defaultScope: "cluster"
   namespace: "minecraft"
