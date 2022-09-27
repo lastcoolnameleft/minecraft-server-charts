@@ -30,7 +30,7 @@ jobs:
         run: |
           whoami
           pwd
-          echo home directory
+          echo home directory ~
           ls -altr ~/
           echo working directory
           ls -altr
