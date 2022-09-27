@@ -84,7 +84,7 @@
         },
         "kubernetesVersion": {
             "type": "String",
-            "defaultValue": null,
+            "defaultValue": "1.24.0",
             "metadata": {
                 "description": "The version of Kubernetes."
             }
@@ -206,7 +206,9 @@
             "type": "Microsoft.KubernetesConfiguration/extensions",
             "apiVersion": "2022-04-02-preview",
             "name": "[parameters('extensionResourceName')]",
-            "dependsOn": [],
+            "dependsOn": [
+                "[resourceId('Microsoft.ContainerService/managedClusters/', parameters('clusterResourceName'))]"
+            ],
             "properties": {
                 "extensionType": "[variables('clusterExtensionTypeName')]",
                 "autoUpgradeMinorVersion": true,
