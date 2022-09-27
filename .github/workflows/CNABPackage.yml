@@ -25,9 +25,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - shell: bash
+      - name: Update Home Path
         run: 'echo HOME=/root | tee -a $GITHUB_ENV'
         
+      - name: OIDC Login to Azure Public Cloud with AzPowershell
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
+          enable-AzPSSession: true
+          
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
