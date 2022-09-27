@@ -34,4 +34,6 @@ jobs:
           ls -altr ~/
           echo working directory
           ls -altr
+          echo /root
+          ls -altr /root
           cpa buildbundle
