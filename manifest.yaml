@@ -1,7 +1,7 @@
 applicationName: com.minecraft.server
 publisher: "Mojang Partner"
 description: "A multi-player server for Minecraft."
-version: 1.0.2 #Must be semver
+version: 1.0.3 #Must be semver
 helmChart: "./charts/minecraft"
 clusterArmTemplate: "./mainTemplate.json"
 uiDefinition: "./createUIDefinition.json"
