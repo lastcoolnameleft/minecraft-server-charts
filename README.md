@@ -20,7 +20,7 @@ The [GitHub Action Workflow](.github/workflows/CNABPackage.yml) will bundle the 
     3. Select "New repository secret"
     4. In the name, enter "AZURE_ACR"
     5. For the secret, enter your ACR login server.
-2. For the "OIDC Login to Azure Public Cloud" step, we need to provide the CLIENT_ID, SUBSCRIPTION_ID, and TENANT_ID of your service principal which has access to the ACR.  You can add the respective secrets using the same steps as the AZURE_ACR secret.  
+2. For the "OIDC Login to Azure Public Cloud" step, we need to provide the AZURE_CLIENT_ID, AZURE_SUBSCRIPTION_ID, and AZURE_TENANT_ID of your service principal which has access to the ACR.  You can add the respective secrets using the same steps as the AZURE_ACR secret.
     * For additional information about OIDC Setup with GitHub and Azure, please reference the link [here](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure)
 
 ## Notes
