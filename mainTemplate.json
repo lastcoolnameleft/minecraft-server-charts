@@ -82,6 +82,13 @@
                 "description": "Disk size (in GiB) to provision for each of the agent pool nodes. This value ranges from 0 to 1023. Specifying 0 will apply the default disk size for that agentVMSize."
             }
         },
+        "osSKU": {
+            "defaultValue": "Ubuntu",
+            "type": "String",
+            "metadata": {
+                "description": "Specifies the OS SKU used by the agent pool. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated."
+            }
+        },
         "kubernetesVersion": {
             "type": "String",
             "defaultValue": "1.24.0",
@@ -172,6 +179,7 @@
                         "minCount": 1,
                         "maxCount": 10,
                         "vmSize": "[parameters('vmSize')]",
+                        "osSKU": "[parameters('osSKU')]",
                         "osType": "Linux",
                         "storageProfile": "ManagedDisks",
                         "type": "VirtualMachineScaleSets",

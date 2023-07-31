@@ -127,6 +127,27 @@
 								"osPlatform": "Linux"
 							},
 							{
+								"name": "osSKU",
+								"type": "Microsoft.Common.DropDown",
+								"label": "Node OS",
+								"defaultValue": "Azure Linux",
+								"toolTip": "Select OS SKU for the AKS node pool",
+								"constraints": {
+									"allowedValues": [
+										{
+											"label": "Azure Linux",
+											"value": "AzureLinux"
+										},
+										{
+											"label": "Ubuntu",
+											"value": "Ubuntu"
+										}
+									],
+									"required": true
+								},
+								"visible": true
+							},
+							{
 								"name": "enableAutoScaling",
 								"type": "Microsoft.Common.CheckBox",
 								"label": "Enable auto scaling",
@@ -225,6 +246,7 @@
 			"kubernetesVersion": "[steps('clusterDetails').newClusterSection.kubernetesVersion]",
 			"extensionResourceName": "[steps('extensionDetails').extensionResourceName]",
 			"vmSize": "[steps('clusterDetails').newClusterSection.vmSize]",
+			"osSKU": "[steps('clusterDetails').newClusterSection.osSKU]",
 			"vmEnableAutoScale": "[steps('clusterDetails').newClusterSection.enableAutoScaling]",
 			"vmCount": "[steps('clusterDetails').newClusterSection.vmCount]",
 			"app-eula" : "[steps('extensionDetails').eula]",
